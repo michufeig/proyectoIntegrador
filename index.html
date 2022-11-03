@@ -1,67 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Integrador</title>
-    <link href="style.css" rel="stylesheet" title="style">
-
-    <!-- fuente -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
-
-    <!-- bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script> -->
-
-
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProyectoIntegración</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" title="style" />
+  </head>
+  <body>
     <div class="contenedor">
-        <nav class="nav">
-            <div class="logo"></div>
-            <button class="ingresar">INGRESAR</button>
-        </nav>
-        <header class="header">
-            <h3>¡Actúa para cambiar el mundo!</h3>
-            <h6>Fomentamos el vínculo entre empresas y organizaciones civiles para generar un
-                impacto positivo en la sociedad.
-                Descubrí diferentes maneras de involucrar a tu organización con la sociedad.
-            </h6>
-        </header>
-        <section class="soluciones"></section>
-        <section class="oportunidades"></section>
-        <section class="noticias"></section>
-        <section class="contacto"></section>
-        <footer class="footer">
-            <div class="logo2"></div>
-            <div class="redes">Seguinos!<br>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-facebook" viewBox="0 0 16 16">
-                    <path
-                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path
-                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                </svg>
-
+      <nav class="nav">
+        <div class="logo"></div>
+        <div class="nosotros"><h4>Nosotros</h4></div>
+        <div class="noticias"><h4>Noticias</h4></div>
+        <div class="ayuda"><h4>Ayuda</h4></div>
+        <div class="logo"></div>
+        <button
+          type="button"
+          class="ingresar"
+          data-toggle="modal"
+          data-target="#modalDialog"
+          id="boton"
+          onclick="document.getElementById('modalDialog').style.display='block'"
+        >
+          INGRESAR
+        </button>
+        <!-- MODAL -->
+      </nav>
+      <div class="modal" id="modalDialog" role="dialog" style="display: none">
+        <!-- <div class="modal-dialog" role="document"> -->
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="oscar"></div>
+            <div class="registrar">
+              <!-- volver atras -->
+              <button
+                type="button"
+                class="volver"
+                data-dismiss="modal"
+                onclick="document.getElementById('modalDialog').style.display='none'"
+              >
+                <img src="Materiales/icono-flecha.png" />volver atras
+              </button>
+              <!-- cruz -->
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="document.getElementById('modalDialog').style.display='none'"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <br /><br /><b>REGISTRAR</b><br /><br />
             </div>
-        </footer>
+            <div class="empresa">
+              <div class="maletin">
+                <img src="Materiales/icono-maletin.png" style="width: 80%" />
+              </div>
+              <p class="empresaTexto"><b>MI EMPRESA</b></p>
+              <p class="empresaTextito">
+                Breve explicacion a lo que nos referimos
+              </p>
+              <img id="flechas" src="Materiales/icono-flecha.png" />
+            </div>
+
+            <div class="org">
+              <div class="persona">
+                <img src="Materiales/icono-persona.png" style="width: 70%" />
+              </div>
+              <p class="orgTexto"><b>MI ORGANIZACION</b></p>
+              <p class="orgTextito">Estamos para ayudarlos a tener exito</p>
+              <img id="flechas" src="Materiales/icono-flecha.png" />
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <header class="header">
+        <p class="titulo">¡Actúa para cambiar el mundo!</p>
+        <p class="subtitulo">
+          Fomentamos el vínculo entre empresas y organizaciones civiles para
+          generar un
+        </p>
+        <p class="subtitulo">impacto positivo en la sociedad.</p>
+        <p class="subtitulo">
+          Descubrí diferentes maneras de involucrar a tu organización con la
+          sociedad.
+        </p>
+      </header>
+
+      <section class="soluciones">
+        <div class="contenidosoluciones">
+          <img
+            src="Materiales/oficina.png"
+            alt="ofi"
+            height="230vh"
+            width="100%"
+            class="imgofi"
+          />
+          <div class="solempresas">
+            <h2 class="titulosol">Soluciones para empresas</h2>
+            <p class="parrafosol">
+              Generamos un medio para que las empresas se involucren en
+              actividades de responsabilidad social. ¡Creá un grupo de
+              voluntarios en tu organización y sé parte del cambio!
+            </p>
+          </div>
+          <img
+            src="Materiales/voluntariado.jpg"
+            alt="ofi"
+            height="230vh"
+            width="100%"
+            class="imgvol"
+          />
+          <div class="solorganizaciones">
+            <h2 class="titulosol">Soluciones para organizaciones</h2>
+            <p class="parrafosol">
+              Apoyamos a las organizaciones sociales para que alcancen sus
+              objetivos. Ponemos a su disposición una comunidad de voluntarios
+              dispuestos a apoyarlas en sus necesidades. Equipos de voluntarios
+              por empresas dispuestos a potenciar tu impacto en la sociedad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="oportunidades">
+        <div class="textocolores">
+          <h1 class="titulocolores">Encuentra las mejores oportunidades</h1>
+          <p class="pcolores">
+            La plataforma cuenta con gran variedad de proyectos locales
+            (sociales, educativos y medioambientales), donde encontrarás el que
+            mejor se adapte a la experiencia que estás buscando. Te ayudamos en
+            la coordinación con la organización de forma simple y rápida.
+          </p>
+        </div>
+        <div class="colores">
+          <div class="rojo">
+            <div class="iconor">
+              <img
+                src="Materiales/icono-mano.png"
+                alt="icono-mano"
+                height="70vh"
+              />
+            </div>
+            <div class="mas">
+              <img src="Materiales/icono-mas.png" alt="mas" height="20vh" />
+            </div>
+            <div class="textor">
+              <p>Ser voluntario</p>
+            </div>
+          </div>
+          <div class="naranja">
+            <div class="iconon">
+              <img
+                src="Materiales/icono-mano-corazon.png"
+                alt="icono-mano-corazon"
+                height="70vh"
+                width="70vw"
+              />
+            </div>
+            <div class="mas">
+              <img src="Materiales/icono-mas.png" alt="mas" height="20vh" />
+            </div>
+            <div class="texton">
+              <p>Donar</p>
+            </div>
+          </div>
+          <div class="verde">
+            <div class="iconov">
+              <img
+                src="Materiales/icono-reciclar.png"
+                alt="icono-reciclar"
+                height="60vh"
+                width="60vw"
+              />
+            </div>
+            <div class="mas">
+              <img src="Materiales/icono-mas.png" alt="mas" height="20vh" />
+            </div>
+            <div class="textov">
+              <p>Reciclar</p>
+            </div>
+          </div>
+          <div class="turquesa">
+            <div class="iconot">
+              <img
+                src="Materiales/icono-maletin.png"
+                alt="icono-maletin"
+                height="60vh"
+                width="60vw"
+              />
+            </div>
+            <div class="mas">
+              <img src="Materiales/icono-mas.png" alt="mas" height="20vh" />
+            </div>
+            <div class="textot">
+              <p>Llamados<br />laborales</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Noticias">
+        <div class="TitulosNoticias">
+          <div class="TituloNoticias">Noticias</div>
+          <div class="TituloNoticias1">ver todas</div>
+        </div>
+        <div class="ContenedorNoticias">
+          <div class="Animales">
+            <div class="Animales1">ANIMALES</div>
+            <div class="Animales2">
+              <img
+                src="Materiales/Noticias1.webp"
+                alt="voluntarios"
+                style="
+                  width: 240px;
+                  height: 180px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                "
+              />
+            </div>
+            <div class="Animales3">
+              <img src="Materiales/icono-calendario.png" alt="calendario" />
+            </div>
+            <div class="Animales4">10/08/2021</div>
+            <div class="Animales5">
+              <img src="Materiales/icono-reloj.png" alt="reloj" />
+            </div>
+            <div class="Animales6">4 min</div>
+            <div class="Animales7">Fundappas abre nuevo centro</div>
+            <div class="Animales8">
+              El nuevo centro estará ubicado dentro<br />
+              del predio municipal Parque Rivera.<br />
+              La inauguración de centro contara con la<br />
+              presencia de la intendenta Carolina...
+            </div>
+            <div class="Animales9">
+              <img src="Materiales/icono-flecha.png" alt="flecha" />
+            </div>
+            <div class="Animales10">ver más</div>
+          </div>
+
+          <div class="Uruguay">
+            <div class="Uruguay1">URUGUAY</div>
+            <div class="Uruguay2">
+              <img
+                src="Materiales/Noticias2.webp"
+                alt="voluntarios"
+                style="
+                  width: 240px;
+                  height: 180px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                "
+              />
+            </div>
+            <div class="Uruguay3">
+              <img src="Materiales/icono-calendario.png" alt="calendario" />
+            </div>
+            <div class="Uruguay4">10/08/2021</div>
+            <div class="Uruguay5">
+              <img src="Materiales/icono-reloj.png" alt="reloj" />
+            </div>
+            <div class="Uruguay6">4 min</div>
+            <div class="Uruguay7">
+              DIRECTV y TECHO inauguraron un <br />
+              espacio deportivo
+            </div>
+            <div class="Uruguay8">
+              Los vecinos del lugar recibieron con<br />
+              alegría la concreción de este proyecto,<br />
+              que busca promover la socialización y la<br />
+              actividad física...
+            </div>
+            <div class="Uruguay9">
+              <img src="Materiales/icono-flecha.png" alt="flecha" />
+            </div>
+            <div class="Uruguay10">ver más</div>
+          </div>
+
+          <div class="Voluntariado">
+            <div class="Voluntariado1">VOLUNTARIADO</div>
+            <div class="Voluntariado2">
+              <img
+                src="Materiales/Noticias3.jpg"
+                alt="voluntarios"
+                style="
+                  width: 240px;
+                  height: 180px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                "
+              />
+            </div>
+            <div class="Voluntariado3">
+              <img src="Materiales/icono-calendario.png" alt="calendario" />
+            </div>
+            <div class="Voluntariado4">10/08/2021</div>
+            <div class="Voluntariado5">
+              <img src="Materiales/icono-reloj.png" alt="reloj" />
+            </div>
+            <div class="Voluntariado6">3 min</div>
+            <div class="Voluntariado7">Jornada de voluntarios</div>
+            <div class="Voluntariado8">
+              Se realizó una nueva jornada de<br />
+              voluntarios Remar. El encuetro tuvo<br />
+              parte en el departamento de<br />
+              montevideo y contó...
+            </div>
+            <div class="Voluntariado9">
+              <img src="Materiales/icono-flecha.png" alt="flecha" />
+            </div>
+            <div class="Voluntariado10">ver más</div>
+          </div>
+          <div class="URGUAY">
+            <div class="URGUAY1">URUGUAY</div>
+            <div class="URGUAY2">
+              <img
+                src="Materiales/Noticias4.jpeg"
+                alt="voluntarios"
+                style="
+                  width: 240px;
+                  height: 180px;
+                  border-radius: 10px;
+                  object-fit: cover;
+                "
+              />
+            </div>
+            <div class="URGUAY3">
+              <img src="Materiales/icono-calendario.png" alt="calendario" />
+            </div>
+            <div class="URGUAY4">10/08/2021</div>
+            <div class="URGUAY5">
+              <img src="Materiales/icono-reloj.png" alt="reloj" />
+            </div>
+            <div class="URGUAY6">5 min</div>
+            <div class="URGUAY7">Lanzamiento del plan Tu Techo</div>
+            <div class="URGUAY8">
+              Techo Uruguay informó su nuevo plan de<br />
+              acción para el segundo semestre del<br />
+              año.
+            </div>
+            <div class="URGUAY9">
+              <img src="Materiales/icono-flecha.png" alt="flecha" />
+            </div>
+            <div class="URGUAY10">ver más</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <div class="Contacto1">
+          <div class="imgcontacto">
+            <img
+              src="Materiales/laptop-escritorio.jpg"
+              alt="computadora"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+        <div class="formulario">
+          <div class="Contacto2">Contacto</div>
+          <form class="dentroform">
+            <div class="Contacto3">
+              <label for="fname">Texto dato</label><br />
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Dato a completar"
+                style="width: 300px; border-radius: 5px"
+              />
+            </div>
+            <div class="Contacto4">
+              <label for="fname">Texto dato</label><br />
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Dato a completar"
+                style="width: 300px; border-radius: 5px"
+              />
+            </div>
+            <div class="Contacto5">
+              <label for="fname">Mensaje</label><br />
+              <textarea
+                style="width: 300px; height: 100px; border-radius: 5px"
+                placeholder="Escribe tu mensaje aquí"
+              ></textarea>
+            </div>
+            <div class="Contacto6">
+              <input type="button" value="ENVIAR" />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="logo2"></div>
+        <div class="listafoot">
+          <p>Nosotros</p>
+          <p>Noticias</p>
+          <p>Contacto</p>
+          <p>Términos y condiciones</p>
+        </div>
+        <div class="redes">
+          Seguinos!<br />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-facebook"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-twitter"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-instagram"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+            />
+          </svg>
+        </div>
+      </footer>
     </div>
-
-
-</body>
-
+  </body>
 </html>
